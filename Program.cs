@@ -1,18 +1,31 @@
-﻿namespace SecondProject
+﻿using System.ComponentModel.DataAnnotations;
+using System.Drawing;
+
+namespace Exercise
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
-            var employee01 = new Employee(01, "FullTimeEmployee", 2800, 198);
-            var employee02 = new Employee(02, "Contractor", 5000, 3, 1700);
-            var employee03 = new Employee(03, "PartTimeEmployee", 15, 65, 82);
+            var circle1 = new Area.Circle(); 
+            circle1.radius = 10;
+            circle1.CallArea();
 
-            Console.WriteLine(employee01.Pay());
-            Console.WriteLine(employee02.Pay());
-            Console.WriteLine(employee03.Pay());
-            
-            Console.ReadLine();
+
+            var rectangle1 = new Area.Rectangle();
+            rectangle1.Length = 10;
+            rectangle1.Breadth = 20;
+            rectangle1.CallArea();
+
+            var triangle1 = new Area.Triangle();
+            triangle1.Base_ = 10;
+            triangle1.Height = 20;
+            triangle1.CallArea();
+
+
+
+
         }
     }
 }
