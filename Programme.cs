@@ -4,6 +4,44 @@
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter a Word: ");
+            string w1 = Convert.ToString(Console.ReadLine());
+
+            char[] w2 = w1.ToCharArray();
+
+            
+            bool isPalindrome = false;
+
+            for (int i=0; i <= w2.Length; i++ )
+            {
+
+                int n = 1;
+                if (w2[i] == w2[w2.Length - n])
+                {
+                    n++;
+                    Console.WriteLine("This word is a palindrome");
+
+                    break;
+
+                }
+                else if (w2[i] != w2[w2.Length - n])
+                {
+                    Console.WriteLine("This word is not a palindrome");
+                    break;
+                }
+
+                
+            }
+
+
+
+
+
+
+
+
+
+
             Console.Write("Enter a number1: ");
             int n1 = Convert.ToInt32(Console.ReadLine());
 
@@ -11,9 +49,9 @@
             int n2 = Convert.ToInt32(Console.ReadLine());
 
 
-            if (n1!=0 && n2 !=0)
+            if (n1 != 0 && n2 != 0)
             {
-                
+
 
                 int n;
                 for (int i = 1; i < n1; i++)
@@ -25,7 +63,7 @@
                         Console.WriteLine("The LCM of " + n1 + " and " + n2 + " is " + n);
                         break;
                     }
-                    
+
                 }
             }
             else
