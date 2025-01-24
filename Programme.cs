@@ -4,15 +4,36 @@
     {
         static void Main(string[] args)
         {
+            int[] nums = {2,7,11,13,15 };
+            int target = 20;
+
+            
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < nums.Length; j++)
+                {
+                    int n = target;
+                    if (i!=j && nums[i] + nums[j] == n )
+                    {
+                        Console.WriteLine("[" + i + "]" + "," + "[" + j + "]");
+                    }
+                    
+
+                }
+                
+            }
+
+
+
             Console.Write("Enter a Word: ");
             string w1 = Convert.ToString(Console.ReadLine());
 
             char[] w2 = w1.ToCharArray();
 
-            
+
             bool isPalindrome = false;
 
-            for (int i=0; i <= w2.Length; i++ )
+            for (int i = 0; i <= w2.Length; i++)
             {
 
                 int n = 1;
@@ -30,14 +51,8 @@
                     break;
                 }
 
-                
+
             }
-
-
-
-
-
-
 
 
 
