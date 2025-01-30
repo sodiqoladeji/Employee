@@ -4,11 +4,63 @@ namespace Exeercise3
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
+            //Time Conversion...
+            string s = "11:05:45AM";
+            char[] t = s.ToCharArray();
+            int h1 = Convert.ToInt32(t[0]) - 48;
+            int h2 = Convert.ToInt32(t[1]) - 48;
+            char[] t1 = new char[8];
+            if (t[8] == 'P')
+            {
+                
+                if ((h1 == 0 && h2 <= 9) || (h1 ==1 && h2 <=2))
+                {
+                    h1 = h1 + 1;
+                    h2 = h2 + 2;
+                    char c1 = Convert.ToChar(h1 + 48);
+                    char c2 = Convert.ToChar(h2 + 48);
+                    t[0] = c1;
+                    t[1] = c2;
+
+                }
+
+                if (h1 == 2 && h2 == 4)
+                {
+                    t[0] = '0';
+                    t[1] = '0';
+                }
+                
+                
+                for (int i = 0; i < 8; i++)
+                {
+                    t1[i] = t[i];
+                }
+                Console.WriteLine(t1);
+            }
+            else if (t[8] == 'A')
+            {
+                
+                for (int i = 0; i < 8; i++)
+                {
+                    t1[i] = t[i];
+                }
+                Console.WriteLine(t1);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Time");
+            }
+
+
+
+
+
 
             //Plus Minus...
-            int[] arr = { -1, -2,0, 3, 4, 5 };
+            int[] arr = { -1, -2, 0, 3, 4, 5 };
             double pos = 0;
             double neg = 0;
             double zer = 0;
@@ -77,41 +129,6 @@ namespace Exeercise3
 
             }
             Console.WriteLine(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -200,5 +217,7 @@ namespace Exeercise3
 
 
         }
+        
+
     }
 }
